@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      :root {
+        --primary-purple: #7749f8;
+        --light-purple: #f5f3ff;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", sans-serif;
+        padding-top: 0;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, var(--light-purple) 0%, #fff 100%);
+        min-height: 80vh;
+        position: relative;
+        overflow: hidden;
+        padding-top: 120px;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .purple-text {
+        color: var(--primary-purple);
+        font-weight: 600;
+      }
+
+      .hero-image {
+        position: relative;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(119, 73, 248, 0.2);
+      }
+
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      .star {
+        position: absolute;
+        color: var(--primary-purple);
+        opacity: 0.5;
+      }
+
+      .expertise-card {
+        background: white;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(119, 73, 248, 0.1);
+      }
+
+      .custom-btn {
+        background: var(--primary-purple);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .custom-btn:hover {
+        background: #5f35d4;
+        transform: translateY(-2px);
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .navbar {
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      .navbar.scrolled {
+        padding: 0.5rem 0;
+      }
+
+      .nav-link {
+        color: #333 !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-purple) !important;
+      }
+
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #333;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    color: #333;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+button {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          padding: 1rem 0;
+        }
+
+        .custom-btn {
+          margin-top: 1rem;
+        }
+      }
+    
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #6a0dad;
+        }
+        .description {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .icon {
+            font-size: 40px;
+            color: #6a0dad;
+        }
+        .service-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .service-description {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Update button styles to be consistent */
+        .custom-btn, 
+        .btn-custom,
+        button {
+          background: var(--primary-purple);
+          color: white;
+          padding: 12px 30px;
+          border-radius: 25px;
+          border: none;
+          transition: all 0.3s ease;
+          width: auto; /* Override the width: calc(100% - 2rem) */
+          margin: 0; /* Reset margin */
+          display: inline-block;
+        }
+      
+        .custom-btn:hover, 
+        .btn-custom:hover,
+        button:hover {
+          background: #5f35d4;
+          transform: translateY(-2px);
+          color: white;
+        }
+      
+        /* Special style for project card buttons only */
+        .project-card button {
+          width: calc(100% - 2rem);
+          margin: 1rem;
+          background-color: var(--primary-purple);
+        }
+        .contact-info i {
+            font-size: 2rem;
+            color: #4b3fbb;
+        }
+        .contact-info p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .contact-info .info-item i {
+            margin-right: 1rem;
+        }
+        .form-control, .btn {
+            border-radius: 0.5rem;
+        }
+        .btn {
+            background-color: #4b3fbb;
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: #3a2f9a;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ccc;
+        }
+        .footer a {
+            color: #4b3fbb;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+      
+        /* Remove the old button styles */
+        /* Delete or comment out the previous button styles */
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About me</a>
+            </li>
+          </ul>
+          <button class="custom-btn">Contact Me</button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section ">
+      <div class="container">
+        <div class="row align-items-center min-vh-80">
+          <div class="col-lg-6 hero-content">
+            <h5 class="animate__animated animate__fadeIn">Hey, I am Malika</h5>
+            <h1
+              class="display-4 fw-bold mb-4 animate__animated animate__fadeInUp"
+            >
+              I create innovative
+              <span class="purple-text">UI/UX designs</span> and captivating
+              <span class="purple-text">graphic designs</span>
+            </h1>
+            <p
+              class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+            >
+              I create designs that tell a story, with intuitive interfaces and
+              seamless experiences that help businesses stand out.
+            </p>
+            <button
+              class="custom-btn animate__animated animate__fadeInUp animate__delay-2s"
+            >
+              Get in Touch
+            </button>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="hero-image floating">
+              <img
+                src="./images/image-1.png"
+                alt="Designer Portrait"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">My Expertise</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="expertise-card p-4 h-100">
+              <div class="mb-3">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="var(--primary-purple)"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <h5>Graphic Design</h5>
+              <p class="text-muted">
+                Creating visually striking designs that communicate your message
+                effectively and creatively.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="expertise-card p-4 h-100">
+              <div class="mb-3">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="var(--primary-purple)"
+                >
+                  <path
+                    d="M4 2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h12v2H6v-2zm0 4h12v2H6v-2z"
+                  />
+                </svg>
+              </div>
+              <h5>Wireframing</h5>
+              <p class="text-muted">
+                Building wireframes that outline the structure and flow of your
+                website or app, ensuring a smooth user journey.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="expertise-card p-4 h-100">
+              <div class="mb-3">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="var(--primary-purple)"
+                >
+                  <path
+                    d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.62 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"
+                  />
+                </svg>
+              </div>
+              <h5>UI & UX Design</h5>
+              <p class="text-muted">
+                Crafting intuitive user-friendly interfaces with a focus on
+                seamless user experiences that delight.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="expertise-card p-4 h-100">
+              <div class="mb-3">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="var(--primary-purple)"
+                >
+                  <path
+                    d="M4 2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h12v2H6v-2zm0 4h12v2H6v-2z"
+                  />
+                </svg>
+              </div>
+              <h5>Prototyping</h5>
+              <p class="text-muted">
+                Developing interactive prototypes to showcase your design
+                concepts and test usability before development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+        <div class="profile my-5">
+            <img src="./images/Ellipse 147 1.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-info">
+                <h1>About Me</h1>
+                <p>I am a passionate UI/UX Designer and Mobile Developer with extensive experience in designing websites and apps across various industries. I specialize in creating intuitive and engaging user experiences through innovative designs, backed by my deep understanding of user behavior and design principles.</p>
+            </div>
+        </div>
+    
+
+    <main class="my-5">
+        <section class="portfolio ">
+            <h2>My Portfolio</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="./images/Image-project.png" alt="Hotel Website">
+                    <h3>Hotel Website with Cooking & Delivery Services</h3>
+                    <p>Designed a user-friendly website for a hotel offering easy online ordering and delivery services for all food and beverage services.</p>
+                    <button onclick="showDetails(1)">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="./images/Image-project-2.png" alt="Complete Reviews">
+                    <h3>Complete Reviews</h3>
+                    <p>Designed UI for Digital reviews to make the process more user-friendly using a clean and modern interface.</p>
+                    <button onclick="showDetails(2)">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="./images/Image-project-3.png" alt="School Management App">
+                    <h3>School Management App</h3>
+                    <p>A comprehensive school management system offering seamless tracking and management of student activities.</p>
+                    <button onclick="showDetails(3)">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <img src="./images/Image-project-4.png" alt="Health & Fitness App">
+                    <h3>Health & Fitness App</h3>
+                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
+                    <button onclick="showDetails(4)">View Details</button>
+                </div>
+                <div class="project-card">
+                    <img src="https://placehold.co/400x300/pink/white?text=Project+4" alt="Health & Fitness App">
+                    <h3>Health & Fitness App</h3>
+                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
+                    <button onclick="showDetails(4)">View Details</button>
+                </div>
+                <div class="project-card">
+                    <img src="https://placehold.co/400x300/pink/white?text=Project+4" alt="Health & Fitness App">
+                    <h3>Health & Fitness App</h3>
+                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
+                    <button onclick="showDetails(4)">View Details</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="section-title">Why Hire Me For Your Next <span class="highlight">Project?</span></h2>
+                <p class="description">I am specialist in UI/UX Designs. My passion is designing Solving problems through user experience and research.</p>
+                <button class="btn btn-custom">Hire me</button>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-gem icon"></i>
+                        <h3 class="service-title">Visual Design</h3>
+                        <p class="service-description">Create user interface design with unique & modern ideas</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-project-diagram icon"></i>
+                        <h3 class="service-title">Design Prototype</h3>
+                        <p class="service-description">Create advance design prototype with figma.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-users icon"></i>
+                        <h3 class="service-title">User research</h3>
+                        <p class="service-description">Create digital user products with updated ideas</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5 mt-5">
+        <div class="row">
+            <div class="col-md-4 contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <p><strong>Call me:</strong></p>
+                        <p>+923081490667</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p><strong>Email me:</strong></p>
+                        <p>malaikabibixwave2@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Address:</strong></p>
+                        <p>Layyah, Punjab, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2>Let's Discuss Your <span style="color: #4b3fbb;">Project</span></h2>
+                <p>Let's make something new, different and more meaningful thing more visual or conceptual</p>
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Full name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Budget">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container footer d-flex justify-content-between">
+        <p>Designed By Malaika</p>
+        <div><a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    
+      const cards = document.querySelectorAll(".expertise-card");
+
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInUp"
+            );
+          }
+        });
+      }, observerOptions);
+
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+
+      // Add floating stars animation
+      function createStars() {
+        const heroSection = document.querySelector(".hero-section");
+        for (let i = 0; i < 20; i++) {
+          const star = document.createElement("div");
+          star.className = "star";
+          star.innerHTML = "✦";
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.fontSize = `${Math.random() * 20 + 10}px`;
+          star.style.animation = `floating ${
+            Math.random() * 3 + 2
+          }s ease-in-out infinite`;
+          heroSection.appendChild(star);
+        }
+      }
+
+      createStars();
+      function showDetails(projectId) {
+    const projects = {
+        1: {
+            title: "Hotel Website with Cooking & Delivery Services",
+            description: "A comprehensive hotel website featuring online ordering and delivery services.",
+            technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        },
+        2: {
+            title: "Complete Reviews",
+            description: "Digital review platform with modern UI/UX design.",
+            technologies: ["UI/UX Design", "Prototyping", "User Research"]
+        },
+        3: {
+            title: "School Management App",
+            description: "Comprehensive school management system for tracking student activities.",
+            technologies: ["Mobile Design", "UX Research", "Prototyping"]
+        },
+        4: {
+            title: "Health & Fitness App",
+            description: "Fitness tracking application with intuitive interface.",
+            technologies: ["Mobile Design", "UI/UX", "Interaction Design"]
+        }
+    };
+
+    const project = projects[projectId];
+    alert(`${project.title}\n\n${project.description}\n\nTechnologies: ${project.technologies.join(", ")}`);
+}
+    </script>
+  </body>
+</html>
