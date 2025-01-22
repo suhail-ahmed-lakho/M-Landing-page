@@ -14,345 +14,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <style>
-      :root {
-        --primary-purple: #7749f8;
-        --light-purple: #f5f3ff;
-      }
-
-      body {
-        background-color: #f8f9fa;
-        font-family: "Segoe UI", sans-serif;
-        padding-top: 0;
-      }
-
-      .hero-section {
-        background: linear-gradient(135deg, var(--light-purple) 0%, #fff 100%);
-        min-height: 80vh;
-        position: relative;
-        overflow: hidden;
-        padding-top: 120px;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
-
-      .purple-text {
-        color: var(--primary-purple);
-        font-weight: 600;
-      }
-
-      .hero-image {
-        position: relative;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(119, 73, 248, 0.2);
-      }
-
-      .floating {
-        animation: floating 3s ease-in-out infinite;
-      }
-
-      .star {
-        position: absolute;
-        color: var(--primary-purple);
-        opacity: 0.5;
-      }
-
-      .expertise-card {
-        background: white;
-        border-radius: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-      }
-
-      .expertise-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(119, 73, 248, 0.1);
-      }
-
-      .custom-btn {
-        background: var(--primary-purple);
-        color: white;
-        padding: 12px 30px;
-        border-radius: 25px;
-        border: none;
-        transition: all 0.3s ease;
-      }
-
-      .custom-btn:hover {
-        background: #5f35d4;
-        transform: translateY(-2px);
-      }
-
-      @keyframes floating {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-      .navbar {
-        padding: 1rem 0;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-
-      .navbar.scrolled {
-        padding: 0.5rem 0;
-      }
-
-      .nav-link {
-        color: #333 !important;
-        font-weight: 500;
-        padding: 0.5rem 1rem !important;
-        transition: color 0.3s ease;
-      }
-
-      .nav-link:hover,
-      .nav-link.active {
-        color: var(--primary-purple) !important;
-      }
-
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background-color: white;
-    padding: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.profile {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.profile-img {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.profile-info h1 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.portfolio h2 {
-    text-align: center;
-    margin: 2rem 0;
-    color: #333;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    padding: 1rem;
-    color: #333;
-}
-
-.project-card p {
-    padding: 0 1rem 1rem;
-    color: #666;
-}
-
-button {
-    display: block;
-    width: calc(100% - 2rem);
-    margin: 1rem;
-    padding: 0.8rem;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff1493;
-}
-
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-}
-
-      @media (max-width: 991.98px) {
-        .navbar-collapse {
-          padding: 1rem 0;
-        }
-
-        .custom-btn {
-          margin-top: 1rem;
-        }
-      }
-    
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .highlight {
-            color: #6a0dad;
-        }
-        .description {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-        .btn-custom {
-            background-color: #6a0dad;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .icon {
-            font-size: 40px;
-            color: #6a0dad;
-        }
-        .service-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .service-description {
-            margin-top: 5px;
-            color: #666;
-        }
-        /* Update button styles to be consistent */
-        .custom-btn, 
-        .btn-custom,
-        button {
-          background: var(--primary-purple);
-          color: white;
-          padding: 12px 30px;
-          border-radius: 25px;
-          border: none;
-          transition: all 0.3s ease;
-          width: auto; /* Override the width: calc(100% - 2rem) */
-          margin: 0; /* Reset margin */
-          display: inline-block;
-        }
-      
-        .custom-btn:hover, 
-        .btn-custom:hover,
-        button:hover {
-          background: #5f35d4;
-          transform: translateY(-2px);
-          color: white;
-        }
-      
-        /* Special style for project card buttons only */
-        .project-card button {
-          width: calc(100% - 2rem);
-          margin: 1rem;
-          background-color: var(--primary-purple);
-        }
-        .contact-info i {
-            font-size: 2rem;
-            color: #4b3fbb;
-        }
-        .contact-info p {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-        
-        .contact-info .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .contact-info .info-item i {
-            margin-right: 1rem;
-        }
-        .form-control, .btn {
-            border-radius: 0.5rem;
-        }
-        .btn {
-            background-color: #4b3fbb;
-            color: #fff;
-        }
-        .btn:hover {
-            background-color: #3a2f9a;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ccc;
-        }
-        .footer a {
-            color: #4b3fbb;
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-        }
-
-      
-        /* Remove the old button styles */
-        /* Delete or comment out the previous button styles */
-    </style>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
+        <a class="navbar-brand" href="#home">
+          <span class="purple-text">Malaika</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -365,23 +39,29 @@ button:hover {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#home">Home</a>
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#expertise">Expertise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About me</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          <button class="custom-btn">Contact Me</button>
+          <a href="#contact" class="custom-btn">Let's Talk</a>
         </div>
       </div>
     </nav>
     <!-- Hero Section -->
-    <section class="hero-section ">
+    <section class="hero-section my-5" id="home">
       <div class="container">
         <div class="row align-items-center min-vh-80">
           <div class="col-lg-6 hero-content">
@@ -419,7 +99,7 @@ button:hover {
     </section>
 
     <!-- Expertise Section -->
-    <section class="py-5">
+    <section class="py-5 my-5" id="expertise">
       <div class="container">
         <h2 class="text-center mb-5">My Expertise</h2>
         <div class="row g-4">
@@ -511,63 +191,251 @@ button:hover {
       </div>
     </section>
 
-  
-        <div class="profile my-5">
-            <img src="./images/Ellipse 147 1.png" alt="Profile Picture" class="profile-img">
-            <div class="profile-info">
-                <h1>About Me</h1>
-                <p>I am a passionate UI/UX Designer and Mobile Developer with extensive experience in designing websites and apps across various industries. I specialize in creating intuitive and engaging user experiences through innovative designs, backed by my deep understanding of user behavior and design principles.</p>
+    <!-- About Section -->
+    <section class="about-section py-5 my-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="about-image">
+                        <img src="./images/Ellipse 147 1.png" alt="Profile Picture">
+                        <div class="experience-badge">
+                            <span class="years">3+</span>
+                            <span class="text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h2 class="section-title">About <span class="purple-text">Me</span></h2>
+                        <p class="lead">UI/UX Designer</p>
+                        <p class="description">
+                            I am a passionate UI/UX Designer with extensive experience in creating intuitive and engaging digital experiences. 
+                            I specialize in transforming complex user requirements into elegant, user-friendly designs that drive engagement 
+                            and satisfaction. My approach combines aesthetic excellence with user-centered design principles.
+                        </p>
+                        <div class="key-points">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>User Interface Design</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>User Experience Design</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Wireframing & Prototyping</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>User Research</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-buttons">
+                            <a href="#contact" class="custom-btn">
+                                Let's Talk
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="https://www.behance.net/malaikabibi10" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                                View Portfolio
+                                <i class="fas fa-external-link-alt ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    
+    </section>
 
     <main class="my-5">
-        <section class="portfolio ">
-            <h2>My Portfolio</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <img src="./images/Image-project.png" alt="Hotel Website">
-                    <h3>Hotel Website with Cooking & Delivery Services</h3>
-                    <p>Designed a user-friendly website for a hotel offering easy online ordering and delivery services for all food and beverage services.</p>
-                    <button onclick="showDetails(1)">View Details</button>
-                </div>
+        <section class="portfolio py-5 my-5" id="portfolio">
+            <div class="container">
+                <h2 class="section-title">My Creative <span class="purple-text">Portfolio</span></h2>
+                <p class="text-center mb-5">Discover my recent design projects and creative works</p>
+                
+                <div class="row g-4">
+                    <!-- Portfolio Item 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project.png" alt="Hotel Website">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Hotel Website with Cooking & Delivery Services</h3>
+                                <p>Designed a user-friendly website for a hotel offering easy online ordering and delivery services.</p>
+                                <div class="tech-stack">
+                                    <span>UI/UX</span>
+                                    <span>Figma</span>
+                                    <span>Prototype</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="project-card">
-                    <img src="./images/Image-project-2.png" alt="Complete Reviews">
-                    <h3>Complete Reviews</h3>
-                    <p>Designed UI for Digital reviews to make the process more user-friendly using a clean and modern interface.</p>
-                    <button onclick="showDetails(2)">View Details</button>
-                </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project-2.png" alt="Complete Reviews">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Complete Reviews</h3>
+                                <p>Digital review platform with modern UI/UX design for enhanced user experience.</p>
+                                <div class="tech-stack">
+                                    <span>UI/UX</span>
+                                    <span>Research</span>
+                                    <span>Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="project-card">
-                    <img src="./images/Image-project-3.png" alt="School Management App">
-                    <h3>School Management App</h3>
-                    <p>A comprehensive school management system offering seamless tracking and management of student activities.</p>
-                    <button onclick="showDetails(3)">View Details</button>
-                </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project-3.png" alt="E-commerce App">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>E-commerce Mobile App</h3>
+                                <p>Developed a modern e-commerce app with seamless shopping experience and secure payment integration.</p>
+                                <div class="tech-stack">
+                                    <span>Mobile App</span>
+                                    <span>UI/UX</span>
+                                    <span>Flutter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="project-card">
-                    <img src="./images/Image-project-4.png" alt="Health & Fitness App">
-                    <h3>Health & Fitness App</h3>
-                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
-                    <button onclick="showDetails(4)">View Details</button>
-                </div>
-                <div class="project-card">
-                    <img src="https://placehold.co/400x300/pink/white?text=Project+4" alt="Health & Fitness App">
-                    <h3>Health & Fitness App</h3>
-                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
-                    <button onclick="showDetails(4)">View Details</button>
-                </div>
-                <div class="project-card">
-                    <img src="https://placehold.co/400x300/pink/white?text=Project+4" alt="Health & Fitness App">
-                    <h3>Health & Fitness App</h3>
-                    <p>Created a fitness application that helps users track their workouts and goals while maintaining a clean and intuitive interface.</p>
-                    <button onclick="showDetails(4)">View Details</button>
+                    <!-- Portfolio Item 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project-4.png" alt="Healthcare Dashboard">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Healthcare Dashboard</h3>
+                                <p>Designed an intuitive dashboard for healthcare professionals to manage patient data efficiently.</p>
+                                <div class="tech-stack">
+                                    <span>Dashboard</span>
+                                    <span>UI/UX</span>
+                                    <span>Web App</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project-2.png" alt="Fitness App">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Fitness Tracking App</h3>
+                                <p>Created a comprehensive fitness app with workout tracking, nutrition planning, and progress monitoring.</p>
+                                <div class="tech-stack">
+                                    <span>Mobile App</span>
+                                    <span>UI/UX</span>
+                                    <span>React Native</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="./images/Image-project-4.png" alt="Educational Platform">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-links">
+                                        <a href="https://www.behance.net/malaikabibi10" class="view-project" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="https://www.behance.net/malaikabibi10" class="project-link" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Educational Platform</h3>
+                                <p>Developed an interactive learning platform with course management and student progress tracking.</p>
+                                <div class="tech-stack">
+                                    <span>Web App</span>
+                                    <span>UI/UX</span>
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-md-4">
                 <h2 class="section-title">Why Hire Me For Your Next <span class="highlight">Project?</span></h2>
@@ -596,69 +464,156 @@ button:hover {
             </div>
         </div>
     </div>
-    <div class="container py-5 mt-5">
-        <div class="row">
-            <div class="col-md-4 contact-info">
-                <div class="info-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <p><strong>Call me:</strong></p>
-                        <p>+923081490667</p>
+    <section class="contact-section py-5 my-5" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                Let's Discuss Your <span class="purple-text">Project</span>
+            </h2>
+            <p class="text-center mb-5">Let's make something new, different and more meaningful</p>
+            
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-info p-4 rounded-4">
+                        <div class="info-item mb-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h5>Call Me</h5>
+                            <p>+923081490667</p>
+                        </div>
+
+                        <div class="info-item mb-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email Me</h5>
+                            <p>malaikabibixwave2@gmail.com</p>
+                        </div>
+
+                        <div class="info-item mb-4">
+                            <div class="icon-wrapper mb-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5>Location</h5>
+                            <p>Layyah, Punjab, Pakistan</p>
+                        </div>
+
+                        <div class="social-links mt-5">
+                            <h5 class="mb-3">Follow Me</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p><strong>Email me:</strong></p>
-                        <p>malaikabibixwave2@gmail.com</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p><strong>Address:</strong></p>
-                        <p>Layyah, Punjab, Pakistan</p>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form p-4 p-lg-5 rounded-4">
+                        <form>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-2">Full Name</label>
+                                        <input type="text" class="form-control" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-2">Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="+1 234 567 890">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-2">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-2">Project Budget</label>
+                                        <input type="text" class="form-control" placeholder="$1000">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="mb-2">Message</label>
+                                        <textarea class="form-control" rows="5" placeholder="Tell me about your project..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="custom-btn">
+                                        Send Message
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <h2>Let's Discuss Your <span style="color: #4b3fbb;">Project</span></h2>
-                <p>Let's make something new, different and more meaningful thing more visual or conceptual</p>
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Full name">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Phone Number">
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <h3>Malaika</h3>
+                        <p>UI/UX Designer crafting user-centered digital experiences</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h5>Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://twitter.com/MalaikaBibi10" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100090099466089" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/malaika-bibi/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.behance.net/malaikabibi10" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-behance"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Budget">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit message</button>
-                </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4">
+                <hr class="footer-divider">
+                <p class="mb-0">&copy; 2024 Malaika. All rights reserved.</p>
             </div>
         </div>
-    </div>
-    <div class="container footer d-flex justify-content-between">
-        <p>Designed By Malaika</p>
-        <div><a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-
-        </div>
-    </div>
-
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -729,6 +684,43 @@ button:hover {
     const project = projects[projectId];
     alert(`${project.title}\n\n${project.description}\n\nTechnologies: ${project.technologies.join(", ")}`);
 }
+
+// Add smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = section.offsetTop - navHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Active nav link on scroll
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section, div.profile');
+    const navHeight = document.querySelector('.navbar').offsetHeight;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - navHeight - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
     </script>
   </body>
 </html>
